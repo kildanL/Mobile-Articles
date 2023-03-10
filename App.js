@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { Text, View, StatusBar } from 'react-native';
+import styled from 'styled-components/native';
+import { Post } from './components/Post';
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View >
+      <Post title="Первая запись" 
+            imageSrc='https://memepedia.ru/wp-content/uploads/2023/02/chat-gpt-memy.jpg'
+            date="03/03/2023"/>
+      <StatusBar theme="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
