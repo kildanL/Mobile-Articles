@@ -2,8 +2,10 @@ import { Text, View, StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 
 const PostView = styled.View`
+display: flex;
 flex-direction: row;
   padding: 15px;
+  padding-right: 80px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgba(0,0,0,0.1);
@@ -13,10 +15,12 @@ const PostImage = styled.Image`
   height: 60px;
   border-radius: 8px;
   margin-right: 12px;
+  
 `;
 const PostTitle = styled.Text`
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
+  display: flex;
 `;
 const PostDate = styled.Text`
   font-size: 12px;

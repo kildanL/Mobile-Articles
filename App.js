@@ -1,16 +1,14 @@
 // import { StatusBar } from 'expo-status-bar';
-import { Text, View, StatusBar } from 'react-native';
-import styled from 'styled-components/native';
-import { Post } from './components/Post';
+import { View, StatusBar } from 'react-native';
+import HomeScreen from './screens/Home';
 
 
 
 export default function App() {
+
   return (
     <View >
-      <Post title="Первая запись" 
-            imageSrc='https://memepedia.ru/wp-content/uploads/2023/02/chat-gpt-memy.jpg'
-            date="03/03/2023"/>
+      <HomeScreen/>
       <StatusBar theme="auto" />
     </View>
   );
