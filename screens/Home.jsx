@@ -4,9 +4,10 @@ import styled from 'styled-components/native';
 import { Post } from '../components/Post';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Loading } from '../components/Loading';
 
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
 
 const [Articles, setArticles] = useState();
 const [isLoading, setisLoading] = useState(true);
@@ -30,14 +31,7 @@ useEffect(() => {
 
   if(isLoading) {
     return(
-      <View style={{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-        <ActivityIndicator size='large'/>
-        <Text style={{marginTop:15}}>Загрузка...</Text>
-      </View>
+      <Loading/>
     )
   }
 
@@ -47,7 +41,7 @@ useEffect(() => {
           data={Articles}
           refreshControl={<RefreshControl refreshing={isLoading} onRefresh={() =>{fetchPosts()}} />}
           renderItem={({item}) => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('FullPost', {id: item.id, title: item.title})}>
               <Post title={item.title} 
                     imageSrc={item.imageUrl}
                     date={item.createdAt}/>
