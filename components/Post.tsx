@@ -42,8 +42,7 @@ export const Post = ({title, imageSrc, date}) => {
 
     return(
     <PostView>
-      <PostImage source={{uri: imageSrc}} 
-      />
+      <PostImage source={{uri: imageSrc}} />
       <PostDetails>
         <PostTitle>{truncateTitle(title)}</PostTitle>
         <PostDate>{new Date(date).toLocaleDateString()}</PostDate>

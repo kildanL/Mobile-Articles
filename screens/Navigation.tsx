@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { FullPost } from "./FullPost";
 import HomeScreen from "./Home";
