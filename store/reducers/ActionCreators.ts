@@ -11,3 +11,11 @@ export const fetchArcticles = () => async (dispatch: AppDispatch) => {
     .catch(error => dispatch(articleSlice.actions.articlesFetchingError(error.message)))
     
 }
+
+
+
+// export async function fetchArticle(id:number) {
+//     return await axios.get<IArticle>('https://640b464f65d3a01f98163e62.mockapi.io/article/' + id)
+//     .then(response => response.data)
+//     .catch(error => error.message)
+// }
