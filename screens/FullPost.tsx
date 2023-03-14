@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Loading } from "../components/Loading";
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import { IArticle } from "../models/IArticle";
 
 const PostImage = styled.Image`
   width: 100%;
