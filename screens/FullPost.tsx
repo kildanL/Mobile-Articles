@@ -41,14 +41,7 @@ export const FullPost = ({route, navigation}) => {
         });
         dispatch(fetchArcticles());
         GetArticle(id);
-        // axios.get('https://640b464f65d3a01f98163e62.mockapi.io/article/' + id)
-        // .then(response => {
-        //   setArticles(response.data);
-        // })
-        // .catch(error => {
-        //   alert('Ты ошибка,бро :(');
-        //   console.log(error);
-        // }).finally(()=> {setisLoading(false)});
+        
       }, [])
       
         if(isLoading) {
