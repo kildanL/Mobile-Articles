@@ -17,15 +17,15 @@ export const articleSlice = createSlice({
     initialState,
     reducers: {
         articlesFetching(state) {
-            isLoading:true;
+            state.isLoading = true;
         },
         articlesFetchingSuccess(state,action: PayloadAction<IArticle[]>) {
-            isLoading:false;
-            state.error='';
+            state.isLoading = false;
+            state.error ='';
             state.articles = action.payload;
         },
         articlesFetchingError(state, action: PayloadAction<string>) {
-            isLoading:false;
+            state.isLoading = false;
             state.error = action.payload;
         },
     }
